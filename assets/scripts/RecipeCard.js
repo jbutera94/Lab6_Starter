@@ -8,6 +8,7 @@ class RecipeCard extends HTMLElement {
   }
 
   set data(data) {
+    console.log(data);
     // This is the CSS that you'll use for your recipe cards
     const styleElem = document.createElement('style');
     const styles = `
@@ -89,6 +90,71 @@ class RecipeCard extends HTMLElement {
 
     // Here's the root element that you'll want to attach all of your other elements to
     const card = document.createElement('article');
+
+    const recipeTitle = searchForKey(data, 'headline');
+
+    // Thumbnail element
+    const thumbnailElem = document.createElement('img');
+    thumbnailElem.setAttribute('src', searchForKey(data, 'thumbnailUrl'));
+    thumbnailElem.setAttribute('alt', recipeTitle);
+    card.appendChild(thumbnailElem);
+
+    // Title element
+    const titleLinkElem = document.createElement('a');
+    titleLinkElem.setAttribute('href', getUrl(data));
+    titleLinkElem.innerText = recipeTitle;
+
+    const titleContainerElem = document.createElement('p');
+    titleContainerElem.classList.add('title');
+    titleContainerElem.appendChild(titleLinkElem);
+    card.appendChild(titleContainerElem);
+
+    // Organization element
+    const organizationElem = document.createElement('p');
+    organizationElem.classList.add('organization');
+    organizationElem.innerText = getOrganization(data);
+    card.appendChild(organizationElem);
+
+    // Rating element (if applies)
+    const ratingContainerElem = document.createElement('div');
+    ratingContainerElem.classList.add('rating');
+
+    if (searchForKey(data, 'aggregateRating')) {
+      const ratingValue = searchForKey(data, 'ratingValue');
+      const averageRatingElem = document.createElement('span');
+      averageRatingElem.innerText = ratingValue;
+
+      const ratingImageElem = document.createElement('img');
+      const ratingImageUrl = `/assets/images/icons/${Math.round(ratingValue)}-star.svg`;
+      const ratingImageAlt = `${Math.round(ratingValue)} stars`;
+      ratingImageElem.setAttribute('src', ratingImageUrl);
+      ratingImageElem.setAttribute('alt', ratingImageAlt);
+
+      const ratingReviewsElem = document.createElement('span');
+      ratingReviewsElem.innerText = `(${searchForKey(data, 'ratingCount')})`;
+
+      ratingContainerElem.append(averageRatingElem, ratingImageElem, ratingReviewsElem);
+    } else {
+      const noReviewsElem = document.createElement('span');
+      noReviewsElem.innerText = 'No Reviews';
+
+      ratingContainerElem.appendChild(noReviewsElem);
+    }
+
+    card.appendChild(ratingContainerElem);
+
+    // Total time element
+    const totalTimeElem = document.createElement('time');
+    totalTimeElem.innerText = convertTime(searchForKey(data, 'totalTime'));
+    card.appendChild(totalTimeElem);
+
+    // Ingredients element
+    const ingredientsElem = document.createElement('p');
+    ingredientsElem.classList.add('ingredients');
+    ingredientsElem.innerText = createIngredientList(searchForKey(data, 'recipeIngredient'));
+    card.appendChild(ingredientsElem);
+
+    this.shadowRoot.append(styleElem, card);
 
     // Some functions that will be helpful here:
     //    document.createElement()
