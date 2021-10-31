@@ -77,12 +77,14 @@ function createRecipeCards() {
   // show any others you've added when the user clicks on the "Show more" button.
 
   // Part 1 Expose - TODO
-  recipes.forEach(recipeUrl => {
+  // Add cards for first 3 recipes
+  for (let i = 0; i < 3; i++) {
+    const recipeUrl = recipes[i];
     const data = recipeData[recipeUrl];
     const recipeCardElement = document.createElement('recipe-card');
     recipeCardElement.data = data;
     document.getElementsByTagName('main')[0].appendChild(recipeCardElement);
-  });
+  }
 }
 
 function bindShowMore() {
@@ -94,4 +96,25 @@ function bindShowMore() {
   // in the recipeData object where you stored them/
 
   // Part 2 Explore - TODO
+  const showMoreElement = document.querySelector('#button-wrapper button');
+  showMoreElement.addEventListener('click', () => {
+    if (showMoreElement.textContent === 'Show more') {
+      // Add cards for recipes 4 and up
+      for (let i = 3; i < recipes.length; i++) {
+        const recipeUrl = recipes[i];
+        const data = recipeData[recipeUrl];
+        const recipeCardElement = document.createElement('recipe-card');
+        recipeCardElement.data = data;
+        document.getElementsByTagName('main')[0].appendChild(recipeCardElement);
+      }
+      showMoreElement.textContent = 'Show less';
+    } else {
+      // Remove cards from recipes 4 and up
+      const recipeCards = document.querySelectorAll('recipe-card');
+      for (let i = 3; i < recipes.length; i++) {
+        recipeCards[i].remove();
+      }
+      showMoreElement.textContent = 'Show more';
+    }
+  });
 }
