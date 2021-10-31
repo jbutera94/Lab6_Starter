@@ -6,9 +6,9 @@ const recipes = [
   'https://introweb.tech/assets/json/ghostCookies.json',
   'https://introweb.tech/assets/json/birthdayCake.json',
   'https://introweb.tech/assets/json/chocolateChip.json',
-  '/assets/recipes/brookies.json',
-  '/assets/recipes/chocolate-pancakes.json',
-  '/assets/recipes/cinnamon-rolls.json',
+  'assets/recipes/brookies.json',
+  'assets/recipes/chocolate-pancakes.json',
+  'assets/recipes/cinnamon-rolls.json',
 ];
 
 // Once all of the recipes that were specified above have been fetched, their
@@ -51,7 +51,6 @@ async function fetchRecipes() {
       fetch(recipeUrl)
       .then(response => response.json())
       .then(data => {
-        console.log(data);
         recipeData[recipeUrl] = data;
 
         // Resolve true if all 3 recipes are fetched successfully into obj
