@@ -1,0 +1,284 @@
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Organization",
+            "@id": "https://www.mamagourmand.com/#organization",
+            "name": "MamaGourmand",
+            "url": "https://www.mamagourmand.com/",
+            "sameAs": [
+                "https://www.facebook.com/mamagourmand/",
+                "https://www.instagram.com/mamagourmand/",
+                "https://www.youtube.com/channel/UCpkuWpR5U122skog-929IQA?view_as=subscriber",
+                "https://www.pinterest.com/mamagourmand/",
+                "https://twitter.com/mamagourmand"
+            ],
+            "logo": {
+                "@type": "ImageObject",
+                "@id": "https://www.mamagourmand.com/#logo",
+                "inLanguage": "en-US",
+                "url": "https://www.mamagourmand.com/wp-content/uploads/2016/02/mamagourmand-fav3.png",
+                "contentUrl": "https://www.mamagourmand.com/wp-content/uploads/2016/02/mamagourmand-fav3.png",
+                "width": 512,
+                "height": 512,
+                "caption": "MamaGourmand"
+            },
+            "image": {
+                "@id": "https://www.mamagourmand.com/#logo"
+            }
+        },
+        {
+            "@type": "WebSite",
+            "@id": "https://www.mamagourmand.com/#website",
+            "url": "https://www.mamagourmand.com/",
+            "name": "MamaGourmand",
+            "description": "affordable, family-friendly gluten-free meals",
+            "publisher": {
+                "@id": "https://www.mamagourmand.com/#organization"
+            },
+            "potentialAction": [
+                {
+                    "@type": "SearchAction",
+                    "target": {
+                        "@type": "EntryPoint",
+                        "urlTemplate": "https://www.mamagourmand.com/?s={search_term_string}"
+                    },
+                    "query-input": "required name=search_term_string"
+                }
+            ],
+            "inLanguage": "en-US"
+        },
+        {
+            "@type": "ImageObject",
+            "@id": "https://www.mamagourmand.com/best-homemade-chocolate-pancakes-recipe/#primaryimage",
+            "inLanguage": "en-US",
+            "url": "https://www.mamagourmand.com/wp-content/uploads/2020/02/chocolate-pancakes-2.jpg",
+            "contentUrl": "https://www.mamagourmand.com/wp-content/uploads/2020/02/chocolate-pancakes-2.jpg",
+            "width": 1200,
+            "height": 1800,
+            "caption": "stack of double chocolate pancakes with hot fudge and strawberries on top"
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.mamagourmand.com/best-homemade-chocolate-pancakes-recipe/#webpage",
+            "url": "https://www.mamagourmand.com/best-homemade-chocolate-pancakes-recipe/",
+            "name": "Homemade Chocolate Pancakes Recipe - Fluffy Double Chocolate!",
+            "isPartOf": {
+                "@id": "https://www.mamagourmand.com/#website"
+            },
+            "primaryImageOfPage": {
+                "@id": "https://www.mamagourmand.com/best-homemade-chocolate-pancakes-recipe/#primaryimage"
+            },
+            "datePublished": "2020-02-06T18:18:52+00:00",
+            "dateModified": "2021-08-12T15:29:01+00:00",
+            "description": "Best Homemade Chocolate Pancake recipe are easy cocoa powder pancakes that are fluffy, loaded with gooey chocolate chips and uses simple ingredients",
+            "breadcrumb": {
+                "@id": "https://www.mamagourmand.com/best-homemade-chocolate-pancakes-recipe/#breadcrumb"
+            },
+            "inLanguage": "en-US",
+            "potentialAction": [
+                {
+                    "@type": "ReadAction",
+                    "target": [
+                        "https://www.mamagourmand.com/best-homemade-chocolate-pancakes-recipe/"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.mamagourmand.com/best-homemade-chocolate-pancakes-recipe/#breadcrumb",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://www.mamagourmand.com/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Homemade Chocolate Pancakes Recipe"
+                }
+            ]
+        },
+        {
+            "@type": "Article",
+            "@id": "https://www.mamagourmand.com/best-homemade-chocolate-pancakes-recipe/#article",
+            "isPartOf": {
+                "@id": "https://www.mamagourmand.com/best-homemade-chocolate-pancakes-recipe/#webpage"
+            },
+            "author": {
+                "@id": "https://www.mamagourmand.com/#/schema/person/cc5f7b03b5c6e05af79cd2c14b6e24c9"
+            },
+            "headline": "Homemade Chocolate Pancakes Recipe",
+            "datePublished": "2020-02-06T18:18:52+00:00",
+            "dateModified": "2021-08-12T15:29:01+00:00",
+            "wordCount": 1184,
+            "commentCount": 0,
+            "publisher": {
+                "@id": "https://www.mamagourmand.com/#organization"
+            },
+            "image": {
+                "@id": "https://www.mamagourmand.com/best-homemade-chocolate-pancakes-recipe/#primaryimage"
+            },
+            "thumbnailUrl": "https://www.mamagourmand.com/wp-content/uploads/2020/02/chocolate-pancakes-2.jpg",
+            "keywords": [
+                "chocolate",
+                "christmas",
+                "cocoa",
+                "dairy",
+                "easter",
+                "Freezer-Friendly",
+                "gluten free",
+                "gluten free flour",
+                "Mother's Day",
+                "pancakes",
+                "spring",
+                "summer",
+                "Valentine's Day",
+                "vegetarian",
+                "winter"
+            ],
+            "articleSection": [
+                "Baking",
+                "Breakfast",
+                "Christmas",
+                "Easter",
+                "Fall",
+                "Freezer-Friendly",
+                "Gluten Free",
+                "Gluten Free / Adaptable",
+                "Gluten Free Breakfast",
+                "Holidays",
+                "Mother's Day",
+                "Quick and Easy",
+                "Recipes",
+                "Spring",
+                "Summer",
+                "Valentines",
+                "Vegetarian",
+                "Winter"
+            ],
+            "inLanguage": "en-US",
+            "potentialAction": [
+                {
+                    "@type": "CommentAction",
+                    "name": "Comment",
+                    "target": [
+                        "https://www.mamagourmand.com/best-homemade-chocolate-pancakes-recipe/#respond"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "Person",
+            "@id": "https://www.mamagourmand.com/#/schema/person/cc5f7b03b5c6e05af79cd2c14b6e24c9",
+            "name": "Melissa",
+            "description": "Hello fellow food lovers! I am a wife and mother of four who obsesses and contemplates food probably way too much. I refuse to eat mac and cheese and chicken nuggets every night until all my kids have flown the nest, so this is how a foodie feeds a family.",
+            "sameAs": [
+                "https://www.mamagourmand.com",
+                "www.facebook.com/mamagourmand",
+                "https://twitter.com/mamagourmand"
+            ],
+            "url": "https://www.mamagourmand.com/author/melissaerdelacyahoo-com/"
+        },
+        {
+            "@context": "http://schema.org/",
+            "@type": "Recipe",
+            "name": "Chocolate Pancakes",
+            "author": {
+                "@type": "Person",
+                "name": "Melissa Erdelac"
+            },
+            "description": "Best Homemade Chocolate Pancake recipe is a dream come true for any chocolate lover! Easy cocoa pancakes are thick and fluffy, loaded with gooey chocolate chips and uses simple ingredients. ",
+            "datePublished": "2020-02-06T12:18:52+00:00",
+            "image": [
+                "https://www.mamagourmand.com/wp-content/uploads/2020/02/chocolate-pancakes1-1.jpg",
+                "https://www.mamagourmand.com/wp-content/uploads/2020/02/chocolate-pancakes1-1-500x500.jpg",
+                "https://www.mamagourmand.com/wp-content/uploads/2020/02/chocolate-pancakes1-1-500x375.jpg",
+                "https://www.mamagourmand.com/wp-content/uploads/2020/02/chocolate-pancakes1-1-480x270.jpg"
+            ],
+            "recipeYield": [
+                "4"
+            ],
+            "prepTime": "PT5M",
+            "cookTime": "PT15M",
+            "totalTime": "PT20M",
+            "recipeIngredient": [
+                "1 ½ cup all-purpose or gluten free flour, ((see recipe notes for gluten free flour adaptations))",
+                "¼ cup unsweetened cocoa powder",
+                "¼ cup granulated sugar",
+                "1 teaspoon baking soda",
+                "½ teaspoon salt",
+                "1 cup milk",
+                "2  eggs",
+                "1 teaspoon vanilla extract",
+                "¼ cup butter, melted and cooled ((or coconut oil))",
+                "½ cup  semi-sweet chocolate chips, (optional)"
+            ],
+            "recipeInstructions": [
+                {
+                    "@type": "HowToStep",
+                    "text": "In a large bowl whisk together flour, cocoa powder, sugar, baking soda, and salt. In a medium bowl whisk together milk, eggs, and vanilla extract.",
+                    "name": "In a large bowl whisk together flour, cocoa powder, sugar, baking soda, and salt. In a medium bowl whisk together milk, eggs, and vanilla extract.",
+                    "url": "https://www.mamagourmand.com/best-homemade-chocolate-pancakes-recipe/#wprm-recipe-9776-step-0-0"
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Pour the wet ingredients into the dry mixture. Stir until just combined and moistened. Add melted and cooled butter and mix thoroughly. Finally, stir in (optional) chocolate chips. Set aside while griddle preheats over medium heat.",
+                    "name": "Pour the wet ingredients into the dry mixture. Stir until just combined and moistened. Add melted and cooled butter and mix thoroughly. Finally, stir in (optional) chocolate chips. Set aside while griddle preheats over medium heat.",
+                    "url": "https://www.mamagourmand.com/best-homemade-chocolate-pancakes-recipe/#wprm-recipe-9776-step-0-1"
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Coat griddle with butter, coconut oil, or cooking spray. Drop ¼ cup of batter onto hot skillet and cook for 1-2 minutes, or until top starts to bubble and bottoms are set enough to flip. Flip and cook for another 1-2 minutes on the other side.",
+                    "name": "Coat griddle with butter, coconut oil, or cooking spray. Drop ¼ cup of batter onto hot skillet and cook for 1-2 minutes, or until top starts to bubble and bottoms are set enough to flip. Flip and cook for another 1-2 minutes on the other side.",
+                    "url": "https://www.mamagourmand.com/best-homemade-chocolate-pancakes-recipe/#wprm-recipe-9776-step-0-2"
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Transfer to a cooling rack or to a plate loosely covered with aluminum foil to keep warm. Serve with suggested toppings.",
+                    "name": "Transfer to a cooling rack or to a plate loosely covered with aluminum foil to keep warm. Serve with suggested toppings.",
+                    "url": "https://www.mamagourmand.com/best-homemade-chocolate-pancakes-recipe/#wprm-recipe-9776-step-0-3"
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": " DID YOU MAKE THIS RECIPE?? DON&#39;T FORGET TO LEAVE FEEDBACK AND RATE BELOW!",
+                    "name": " DID YOU MAKE THIS RECIPE?? DON&#39;T FORGET TO LEAVE FEEDBACK AND RATE BELOW!",
+                    "url": "https://www.mamagourmand.com/best-homemade-chocolate-pancakes-recipe/#wprm-recipe-9776-step-0-4"
+                }
+            ],
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.87",
+                "ratingCount": "30"
+            },
+            "recipeCategory": [
+                "Breakfast"
+            ],
+            "recipeCuisine": [
+                "American"
+            ],
+            "keywords": "chocolate, chocolate chip, pancakes",
+            "nutrition": {
+                "@type": "NutritionInformation",
+                "calories": "132 kcal",
+                "carbohydrateContent": "17 g",
+                "proteinContent": "3 g",
+                "fatContent": "6 g",
+                "saturatedFatContent": "4 g",
+                "cholesterolContent": "30 mg",
+                "sodiumContent": "182 mg",
+                "fiberContent": "1 g",
+                "sugarContent": "6 g",
+                "servingSize": "1 serving"
+            },
+            "@id": "https://www.mamagourmand.com/best-homemade-chocolate-pancakes-recipe/#recipe",
+            "isPartOf": {
+                "@id": "https://www.mamagourmand.com/best-homemade-chocolate-pancakes-recipe/#article"
+            },
+            "mainEntityOfPage": "https://www.mamagourmand.com/best-homemade-chocolate-pancakes-recipe/#webpage"
+        }
+    ]
+}
